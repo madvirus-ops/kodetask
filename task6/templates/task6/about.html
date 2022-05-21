@@ -1,0 +1,18 @@
+{%extends 'task6/base.html'%}
+
+{% block title %} About{%endblock%}
+
+{%block content%}
+ <h1>
+ 	this is about page
+ </h1>
+ <ul>
+ 	<li>
+ 		we have	<a href="{% url 'home' %}">home page</a>
+ 	</li>
+ 	<li>
+ 		we have	<a href="{% url 'another' %}">another page</a>
+ 	</li>
+ </ul>
+
+{%endblock%}

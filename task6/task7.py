@@ -1,4 +1,4 @@
-from multiprocessing import context
+
 from .models import Product
 
 new = Product(name='beans', price=100)

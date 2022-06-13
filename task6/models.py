@@ -33,4 +33,15 @@ class Bio(models.Model):
     def __str__(self):
         return self.bio
 
-        
+#this models handles the hotel assignment       
+class Hotel_Data(models.Model):
+    occupants_name = models.CharField(max_length=50)
+    room_number = models.IntegerField()
+    amount_paid = models.IntegerField()
+    occupants_email = models.EmailField()
+    occupants_job = models.CharField(max_length=50)
+    number_of_nights = models.IntegerField()
+    start_date = models.DateField()
+    end_date = models.DateField()
+    def __str__(self):
+        return self.occupants_name

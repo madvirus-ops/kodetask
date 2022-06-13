@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from .forms import Hotel_Data_Form
+from django.contrib import messages
+
 
 # Create your views here.
 
@@ -10,3 +13,22 @@ def about(request):
 
 def another(request):
 	return render(request,'task6/another.html')
+
+def hotel(request):
+    if request.method == 'POST':
+            form = Hotel_Data_Form(request.POST)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Form submission successful')
+                return render(request, 'task6/hotel.html', {'form': form})
+
+    else:
+        form = Hotel_Data_Form()
+    context ={
+        'form':form,
+        }
+    return render(request,'task6/hotel.html',context)
+        
+    
+def success(request):
+    return render(request,'task6/sucess.html')

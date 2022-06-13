@@ -29,6 +29,3 @@ def hotel(request):
         }
     return render(request,'task6/hotel.html',context)
         
-    
-def success(request):
-    return render(request,'task6/sucess.html')

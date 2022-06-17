@@ -10,8 +10,10 @@
  </form>
  {% if messages %}
 <ul class="messages">
+    <script>
     {% for message in messages %}
-    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+    window.confirm(" {{ message }}")
+    </script>
     {% endfor %}
 </ul>
 {% endif %}
